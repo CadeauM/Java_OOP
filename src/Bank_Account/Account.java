@@ -6,7 +6,27 @@ public class Account {
     private String name;
     private String email;
     private String phone;
+    //constructor chaining 
+    public Account() {
+        this(5789, 2.50, "Default name", "Default address", "Default phone");
+        System.out.println("Empty Constructor called");
+    }
     // creating constructors
+    public Account(int number, double balance, String name, String customerEmail, String customerPhone) {
+        System.out.println("Account constructor created");
+        this.number = number;
+        this.balance = balance;
+        this.name = name;
+        email = customerEmail;
+        phone = customerPhone;
+    }
+
+
+    public Account(String name, String email, String phone) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
 
     // creating Methods
     public void depositFunds(double depositAmount){
